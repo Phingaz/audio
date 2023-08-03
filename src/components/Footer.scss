@@ -1,0 +1,38 @@
+.footer {
+    min-height: 365px;
+    background-color: var(--black);
+    color: #fff;
+    padding: var(--main-pd);
+    color: grey;
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        color: #fff;
+
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0px;
+        color: grey;
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+            color: #fff;
+        }
+    }
+}
