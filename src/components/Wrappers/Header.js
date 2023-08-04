@@ -39,13 +39,13 @@ export const Header = () => {
                         </li>
                         <li onClick={() => (setSh(false))}>
                             <NavLink
-                                to="#project">
+                                to="/speakers">
                                 speakers
                             </NavLink>
                         </li>
                         <li onClick={() => (setSh(false))}>
                             <NavLink
-                                to="#work">
+                                to="/earphones">
                                 earphones
                             </NavLink>
                         </li>

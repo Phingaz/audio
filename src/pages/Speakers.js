@@ -2,7 +2,9 @@ import "./Headphone.scss"
 
 import { Section } from "../components/Utilities/Section"
 
-import headphone1 from "../components/assets/headphones/headphones1.png"
+import speaker1 from "../components/assets/speaker/speaker1.png"
+import speaker2 from "../components/assets/speaker/speaker2.png"
+
 import headphone from "../components/assets/landing/headphone-landing.png"
 import speaker from "../components/assets/landing/speaker-landing.png"
 import pod from "../components/assets/landing/pod-landing.png"
@@ -11,7 +13,7 @@ import { Wrapper } from "../components/Wrappers/Wrapper"
 import { ProductSmall } from "../components/Utilities/ProductSmall"
 import { Location } from "../components/Utilities/Location"
 
-export const Headphone = () => {
+export const Speakers = () => {
   return (
 
     <Wrapper>
@@ -19,43 +21,36 @@ export const Headphone = () => {
         <div className="container">
           <div className="products">
             <Section
-              image={headphone1}
-              title1='XX99 Mark II'
-              title2='Headphones'
+              image={speaker1}
+              title1='ZX9'
+              title2='Speaker'
               head='New Product'
-              text='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
+              text='Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.'
             />
             <Section
               order={1}
-              image={headphone1}
-              title1='XX99 Mark I'
+              image={speaker2}
+              title1='ZX&'
               title2='Headphones'
-              text='As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'
+              text='Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.'
             />
-            <Section
-              image={headphone1}
-              title1='XX59'
-              title2='Headphones'
-              text='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
-            />
-
           </div>
 
           <div className="category one">
             <ProductSmall
               image={headphone}
               title='Headphones'
-              link='/'
+              link='/headphones'
             />
             <ProductSmall
               image={speaker}
               title='Speakers'
-              link='/'
+              link='/speakers'
             />
             <ProductSmall
               image={pod}
               title='Earphones'
-              link='/'
+              link='/earphones'
             />
           </div>
 

@@ -16,6 +16,13 @@
     object-fit: contain;
     border-radius: var(--bd-radius);
     background-color: var(--darker-white);
+    padding: 40px 0;
+}
+
+.img>img {
+    object-fit: contain;
+
+    width: 60%;
 }
 
 .text {
@@ -70,7 +77,7 @@
         text-align: center;
     }
 
-    .text> p{
+    .text>p {
         margin-bottom: 20px;
     }
 }

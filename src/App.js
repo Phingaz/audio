@@ -1,10 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Landing } from './pages/Landing';
-import { Headphone } from './pages/Headphone';
+import { Headphones } from './pages/Headphones';
+import { Speakers } from './pages/Speakers';
+import { Earphones } from './pages/Earphones';
 
 const router = createBrowserRouter([
   { path: "/", element: <Landing /> },
-  { path: "/headphones", element: <Headphone /> },
+  { path: "/headphones", element: <Headphones /> },
+  { path: "/speakers", element: <Speakers /> },
+  { path: "/earphones", element: <Earphones /> },
 ])
 
 function App() {
