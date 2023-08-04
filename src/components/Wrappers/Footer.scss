@@ -6,6 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
+
+    @media (max-width: 767px) {
+        position: relative;
+        flex-direction: column;
+    }
 
     .container {
         width: min(95%, 1000px);
@@ -16,6 +22,10 @@
             align-items: center;
             padding-top: 40px;
             color: #fff;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
 
             h1 a {
                 text-transform: lowercase;
@@ -33,6 +43,13 @@
             ul {
                 display: flex;
                 gap: 1rem;
+
+                @media (max-width: 767px) {
+                    margin: 30px 0;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
 
                 li {
                     list-style: none;
@@ -60,11 +77,24 @@
             padding: 40px 0px;
             color: grey;
 
+            @media (max-width: 767px) {
+                justify-content: center;
+                padding: 10px 15px;
+                flex-direction: column;
+            }
+
             .icons {
                 display: flex;
                 gap: 1rem;
                 color: #fff;
                 align-self: flex-end;
+
+                @media (max-width: 767px) {
+                    position: absolute;
+                    bottom: 0;
+                    right: 50%;
+                    transform: translate(50%, -100%);
+                }
 
                 >* {
                     font-size: 1.7rem;
@@ -82,5 +112,12 @@
     p {
         font-weight: bold;
         width: 50%;
+
+        @media (max-width: 767px) {
+            text-align: center;
+            width: 100%;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
     }
 }
