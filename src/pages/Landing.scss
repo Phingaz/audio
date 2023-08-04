@@ -1,10 +1,11 @@
-:root {
-    --main-pd: 0 3rem;
-    --black: #0E0E0E; 
-    --grey: grey;
-    --white: #fff;
-}
 
 .landing {
     min-height: 100vh;
+    padding: var(--main-pd);
+
+    .middle {
+        display: flex;
+        gap: 1rem;
+        margin: 40px 0;
+    }
 }

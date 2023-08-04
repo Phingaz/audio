@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    height: 180px;
+    position: relative;
+    border-radius: var(--bd-radius);
+    text-align: center;
+    background-color: var(--darker-white);
+}
+
+.img {
+    width: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: calc(-80px + 50%);
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.dropshadow {
+    margin-top: 10px;
+    height: 20px;
+    width: 80px;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.594);
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.content h6 {}
+
+.content p {}
