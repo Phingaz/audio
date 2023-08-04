@@ -19,7 +19,7 @@ export const Header = () => {
                 </button>
                 <h1 onClick={() => (setSh(false))}>
                     <NavLink
-                        to="/#">
+                        to="/">
                         audiophile
                     </NavLink>
                 </h1>
@@ -27,13 +27,13 @@ export const Header = () => {
                     <ul className={styled.nav_links}>
                         <li onClick={() => (setSh(false))}>
                             <NavLink
-                                to="/#">
+                                to="/">
                                 Home
                             </NavLink>
                         </li>
                         <li onClick={() => (setSh(false))}>
                             <NavLink
-                                to="#about">
+                                to="/headphones">
                                 Headphones
                             </NavLink>
                         </li>

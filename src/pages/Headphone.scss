@@ -1,0 +1,29 @@
+.headphone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        
+        width: min(95%, 1000px);
+
+
+        .one {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+            gap: 1.5rem;
+
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+        }
+    }
+}

@@ -96,7 +96,7 @@ h6 {
   line-height: 25px;
 }
 
-button {
+button,.link-btn {
   cursor: pointer;
   outline: none;
   border: none;
@@ -106,4 +106,5 @@ button {
   font-weight: bold;
   font-size: 1rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }

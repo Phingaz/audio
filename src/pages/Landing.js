@@ -1,6 +1,6 @@
 import "./Landing.scss"
 import { Wrapper } from '../components/Wrappers/Wrapper'
-import { ProductSmall } from "../components/ProductSmall"
+import { ProductSmall } from "../components/Utilities/ProductSmall"
 
 import main from "../components/assets/landing/main-landing.png"
 import headphone from "../components/assets/landing/headphone-landing.png"
@@ -10,7 +10,7 @@ import pod from "../components/assets/landing/pod-landing.png"
 import speaker2 from "../components/assets/landing/category-two-speaker.png"
 import speaker3 from "../components/assets/landing/category-three-speaker.png"
 import pods from "../components/assets/landing/category-buds.png"
-import person from "../components/assets/landing/person.png"
+import { Location } from "../components/Utilities/Location"
 
 
 export const Landing = () => {
@@ -75,17 +75,8 @@ export const Landing = () => {
                         </div>
                     </div>
 
-                    <div className="category five">
-                        <div className="info">
-                            <h5>Bringing you the <span>best</span>  audio gear
-                            </h5>
-                            <p>
-                                Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
-                            </p>
-                        </div>
+                    <Location />
 
-                        <img src={person} alt="person" />
-                    </div>
                 </div>
             </div>
         </Wrapper>
