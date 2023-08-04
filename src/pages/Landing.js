@@ -36,17 +36,17 @@ export const Landing = () => {
                         <ProductSmall
                             image={headphone}
                             title='Headphones'
-                            link='/'
+                            link='/headphones'
                         />
                         <ProductSmall
                             image={speaker}
                             title='Speakers'
-                            link='/'
+                            link='/speakers'
                         />
                         <ProductSmall
                             image={pod}
                             title='Earphones'
-                            link='/'
+                            link='/earphones'
                         />
                     </div>
 
