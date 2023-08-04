@@ -1,4 +1,5 @@
 import styled from "./ProductSmall.module.css"
+import {NavLink} from "react-router-dom"
 
 export const ProductSmall = ({ image, title, link }) => {
     return (
@@ -12,7 +13,7 @@ export const ProductSmall = ({ image, title, link }) => {
             <div className={styled.content}>
                 <h6>{title}</h6>
 
-                <a href={link}>Shop</a>
+                <NavLink to={link}>Shop <span className={styled.icon}>&gt;</span> </NavLink>
             </div>
         </div>
     )

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
-  --main-pd: 0 3rem;
+  --main-pd: 0 10rem;
   --bd-radius: 8px;
 
   /* colors */
   --main: rgb(216, 125, 74);
+  --hover: rgb(216, 125, 74);
   --accent: rgb(251, 175, 133);
   --grey: grey;
   --darker-white: rgb(241, 241, 241);
@@ -13,6 +14,7 @@
   --black-main: #000000;
   --black-alt: #0E0E0E;
   --white: #fff;
+  --bg-black-grdt: linear-gradient(90deg, rgba(14, 14, 14, 1) 0%, rgb(20, 20, 19) 66%, rgb(19, 19, 19) 100%);
 }
 
 * {
@@ -21,16 +23,13 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-padding-top: 65px;
-}
-
 body {
   font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 15px;
-  line-height: 25px;
+  font-weight: lighter;
+  letter-spacing: 0.8px;
 }
 
 h1,
@@ -41,7 +40,7 @@ h5,
 h6 {
   text-transform: uppercase;
 }
- 
+
 h1 {
   font-weight: 800;
   font-size: 3.5rem;
@@ -82,4 +81,29 @@ h6 {
   font-size: 1.2rem;
   letter-spacing: 1.3px;
   line-height: 24px;
+}
+
+.spacedout {
+  letter-spacing: 10px;
+  font-size: 0.9rem;
+  line-height: 19px;
+}
+
+
+.subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 20px 30px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
