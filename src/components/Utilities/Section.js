@@ -9,6 +9,7 @@ export const Section = ({ image, head, title1, title2, text, link, order }) => {
             <div className={styled.container}>
                 <div style={{order: order}} className={styled.img}>
                     <img src={image} alt='headphone' />
+                    <div className={styled.dropshadow}></div>
                 </div>
                 <div className={styled.text}>
                     <h6>{head}</h6>
