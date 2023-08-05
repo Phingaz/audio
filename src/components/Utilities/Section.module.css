@@ -16,12 +16,12 @@
     object-fit: contain;
     border-radius: var(--bd-radius);
     background-color: var(--darker-white);
-    padding: 40px 0;
+    padding: 60px 10px;
 }
 
 .img>img {
     object-fit: contain;
-    width: 60%;
+    width: 50%;
 }
 
 .text {

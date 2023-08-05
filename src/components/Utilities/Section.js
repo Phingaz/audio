@@ -1,5 +1,5 @@
 import styled from "./Section.module.css"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export const Section = ({ image, head, title1, title2, text, link, order }) => {
 
@@ -14,11 +14,11 @@ export const Section = ({ image, head, title1, title2, text, link, order }) => {
                     <h6>{head}</h6>
                     <h3>{title1} <br /> {title2}</h3>
                     <p>{text}</p>
-                    <NavLink
+                    <Link
                         className='link-btn'
                         to={link}>
                         See product
-                    </NavLink>
+                    </Link>
                 </div>
             </div>
 

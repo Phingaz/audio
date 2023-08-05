@@ -1,5 +1,5 @@
 import "./Footer.scss"
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -10,37 +10,37 @@ export const Footer = () => {
             <div className="container">
                 <div className="heading">
                     <h1>
-                        <NavLink
-                            to="/#">
+                        <Link
+                            to="/">
                             audiophile
-                        </NavLink>
+                        </Link>
                     </h1>
                     <ul>
                         <li>
-                            <NavLink
-                                to="/#">
+                            <Link
+                                to="/">
                                 Home
-                            </NavLink>
+                            </Link>
                         </li>
                         <li>
-                            <NavLink
-                                to="/#">
+                            <Link
+                                to="/headphones">
                                 Headphones
-                            </NavLink>
+                            </Link>
                         </li>
                         <li>
-                            <NavLink
-                                to="/#">
+                            <Link
+                                to="/speakers">
                                 speakers
-                            </NavLink>
+                            </Link>
                         </li>
                         <li>
-                            <NavLink
-                                to="/#">
+                            <Link
+                                to="/earphones">
                                 earphones
-                            </NavLink>
+                            </Link>
                         </li>
-                        
+
                     </ul>
                 </div>
 
