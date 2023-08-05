@@ -56,7 +56,10 @@ export const Landing = () => {
                         <div className="text">
                             <h2>ZX9 <br />SPEAKER</h2>
                             <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                            <button>SEE PRODUCT</button>
+                            <Link
+                                className="link-btn"
+                                to='/speakers/zx9'
+                            >SEE PRODUCT</Link>
                         </div>
                     </div>
 
@@ -64,7 +67,10 @@ export const Landing = () => {
                         <img src={speaker3} alt="speaker" />
                         <div className="info">
                             <h4>ZX7 SPEAKER</h4>
-                            <button>see product</button>
+                            <Link
+                                to='/speakers/zx7'
+                                className="link-btn"
+                            >see product</Link>
                         </div>
                     </div>
 
@@ -72,7 +78,10 @@ export const Landing = () => {
                         <img src={pods} alt="buds" />
                         <div className="info">
                             <h4>YX1 Earphones</h4>
-                            <button>see product</button>
+                            <Link
+                                to='/earphones/yx1'
+                                className="link-btn"
+                            >see product</Link>
                         </div>
                     </div>
 

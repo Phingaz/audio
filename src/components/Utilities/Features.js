@@ -1,6 +1,49 @@
 import styled from "./Features.module.css"
 
-export const Features = () => {
+export const Features = ({ text1, text2, type }) => {
+
+    let included;
+
+    switch (type) {
+        case 'markii':
+            included = <>
+                <li><span>1x</span><p> Headphone Unit</p></li>
+                <li><span>2x</span><p> Replacement Earcups</p></li>
+                <li><span>1x</span><p>User Manual</p></li>
+                <li><span>1x</span><p>3.5mm 5m Audio Cable</p></li>
+                <li><span>1x</span><p>Travel Bag</p></li>
+            </>
+            break;
+        case 'headphones':
+            included = <>
+                <li><span>1x</span><p> Headphone Unit</p></li>
+                <li><span>2x</span><p> Replacement Earcups</p></li>
+                <li><span>1x</span><p>User Manual</p></li>
+                <li><span>1x</span><p>3.5mm 5m Audio Cable</p></li>
+            </>
+            break;
+        case 'speakers':
+            included = <>
+                <li><span>2x</span><p> Speaker Unit</p></li>
+                <li><span>2x</span><p> Speaker Cloth Panel</p></li>
+                <li><span>1x</span><p>User Manual</p></li>
+                <li><span>1x</span><p>3.5mm 5m Audio Cable</p></li>
+                <li><span>1x</span><p>10m Optical Cable</p></li>
+            </>
+            break;
+        case 'earphones':
+            included = <>
+                <li><span>2x</span><p> Earphone Unit</p></li>
+                <li><span>2x</span><p> Multi-size Earplugs</p></li>
+                <li><span>1x</span><p>User Manual</p></li>
+                <li><span>1x</span><p>USB-C Charging Cable</p></li>
+                <li><span>1x</span><p>Travel Pouch</p></li>
+            </>
+            break;
+
+        default:
+            break;
+    }
 
     return (
         <section className={styled.section}>
@@ -11,11 +54,11 @@ export const Features = () => {
 
                     <div className={styled.p}>
                         <p>
-                            Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.
+                            {text1}
                         </p>
                         <br />
                         <p>
-                            The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic.
+                            {text2}
                         </p>
                     </div>
 
@@ -24,11 +67,7 @@ export const Features = () => {
                 <div className={styled.box}>
                     <h3>in the box</h3>
                     <ul className={styled.ul}>
-                        <li><span>1x</span> Headphone Unit</li>
-                        <li><span>1x</span> Headphone Unit</li>
-                        <li><span>1x</span> Headphone Unit</li>
-                        <li><span>1x</span> Headphone Unit</li>
-                        <li><span>1x</span> Headphone Unit</li>
+                        {included}
                     </ul>
                 </div>
 

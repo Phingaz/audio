@@ -1,18 +1,18 @@
-import "./ProductPage.scss"
+import "../ProductPage.scss"
 
-import { Section } from "../components/Utilities/Section"
+import { Section } from "../../components/Utilities/Section"
 
-import headphone1 from "../components/assets/headphones/headphone1.png"
-import headphone2 from "../components/assets/headphones/headphone2.png"
-import headphone3 from "../components/assets/headphones/headphone3.png"
+import headphone1 from "../../components/assets/headphones/headphone1.png"
+import headphone2 from "../../components/assets/headphones/headphone2.png"
+import headphone3 from "../../components/assets/headphones/headphone3.png"
 
-import headphone from "../components/assets/landing/headphone-landing.png"
-import speaker from "../components/assets/landing/speaker-landing.png"
-import pod from "../components/assets/landing/pod-landing.png"
+import headphone from "../../components/assets/landing/headphone-landing.png"
+import speaker from "../../components/assets/landing/speaker-landing.png"
+import pod from "../../components/assets/landing/pod-landing.png"
 
-import { Wrapper } from "../components/Wrappers/Wrapper"
-import { ProductSmall } from "../components/Utilities/ProductSmall"
-import { Location } from "../components/Utilities/Location"
+import { Wrapper } from "../../components/Wrappers/Wrapper"
+import { ProductSmall } from "../../components/Utilities/ProductSmall"
+import { Location } from "../../components/Utilities/Location"
 
 export const Headphones = () => {
   return (
@@ -31,20 +31,22 @@ export const Headphones = () => {
               head='New Product'
               text='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
               link='/headphones/mark_ii'
-            />
+              />
             <Section
               order={1}
               image={headphone2}
               title1='XX99 Mark I'
               title2='Headphones'
               text='As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'
-            />
+              link='/headphones/mark_i'
+              />
             <Section
               image={headphone3}
               title1='XX59'
               title2='Headphones'
               text='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
-            />
+              link='/headphones/xx59'
+              />
 
           </div>
 

@@ -123,9 +123,10 @@
                             color: var(--darker-white);
                             margin-bottom: 20px;
                             font-size: 0.8rem;
+                            margin-bottom: 40px;
                         }
 
-                        button {
+                        .link-btn {
                             background-color: var(--black-main);
                             color: var(--white);
 
@@ -157,7 +158,8 @@
                             margin-bottom: 20px;
                         }
 
-                        button {
+                        .link-btn {
+                            color: var(--black-alt);
                             background-color: transparent;
                             border: 1px solid var(--black-main);
 
@@ -197,7 +199,8 @@
                             margin-bottom: 20px;
                         }
 
-                        button {
+                        .link-btn {
+                            color: var(--black-alt);
                             border: 1px solid var(--black-main);
 
                             &:hover {
@@ -357,7 +360,7 @@
                                 font-size: 1.5rem;
                             }
 
-                            button {
+                            .link-btn {
                                 scale: 0.8;
 
                                 @media (max-width:500px) {

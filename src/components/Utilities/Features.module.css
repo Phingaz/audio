@@ -43,6 +43,8 @@
 }
 
 .ul>li {
+    display: flex;
+    align-items: center;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -50,6 +52,7 @@
 .ul>li>span {
     font-weight: 800;
     color: var(--main);
+    text-align: right;
     margin-right: 10px;
 }
 
