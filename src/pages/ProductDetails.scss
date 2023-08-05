@@ -1,0 +1,38 @@
+.headphone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: min(95%, 1000px);
+        
+        .back {
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 50px;
+            color: var(--grey);
+            align-self: flex-start;
+        }
+
+        .one {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+            gap: 1.5rem;
+
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+        }
+    }
+}

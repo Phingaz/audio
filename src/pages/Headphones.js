@@ -1,4 +1,4 @@
-import "./Headphone.scss"
+import "./ProductPage.scss"
 
 import { Section } from "../components/Utilities/Section"
 
@@ -19,6 +19,9 @@ export const Headphones = () => {
 
     <Wrapper>
       <div className="headphone">
+        <div className="title">
+          <h1>Headphones</h1>
+        </div>
         <div className="container">
           <div className="products">
             <Section

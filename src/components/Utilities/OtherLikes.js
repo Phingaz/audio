@@ -1,5 +1,4 @@
 import styled from "./OtherLikes.module.css"
-import image from "../assets/headphones/headphone1.png"
 import { Link } from "react-router-dom"
 
 export const OtherLikes = ({ image1, title1, link1, image2, title2, link2, image3, title3, link3 }) => {

@@ -6,7 +6,7 @@ import { Speakers } from './pages/Speakers';
 import { Earphones } from './pages/Earphones';
 import ScrollToTop from './components/Utilities/ScrollToTop';
 
-import { Mark_II } from './pages/Mark_II';
+import { MarkII } from './pages/MarkII';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path='/' element={<Landing />} />
         <Route path='/headphones' element={<Headphones />} />
         {/* <Route path='/headphones/mark-ii' element={<Mark2 />} /> */}
-        <Route path='/headphones/mark_ii' element={<Mark_II />} />
+        <Route path='/headphones/mark_ii' element={<MarkII />} />
         {/* <Route path='/headphones/xx59' element={<Xx59 />} /> */}
 
         <Route path='/speakers' element={<Speakers />} />

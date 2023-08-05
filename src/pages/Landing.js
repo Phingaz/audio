@@ -11,6 +11,7 @@ import speaker2 from "../components/assets/landing/category-two-speaker.png"
 import speaker3 from "../components/assets/landing/category-three-speaker.png"
 import pods from "../components/assets/landing/category-buds.png"
 import { Location } from "../components/Utilities/Location"
+import { Link } from "react-router-dom"
 
 
 export const Landing = () => {
@@ -24,7 +25,7 @@ export const Landing = () => {
                             <h6 className="spacedout">NEW PRODUCT</h6>
                             <h1>XX99 Mark II Headphones</h1>
                             <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                            <button>SEE PRODUCT</button>
+                            <Link className="link-btn" to='/headphones/mark_ii'>SEE PRODUCT</Link>
                         </div>
 
                         <img src={main} alt="main" />

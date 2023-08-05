@@ -4,21 +4,22 @@
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-
-
+    
+    
     .container {
         flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center;
         width: min(95%, 1000px);
-
+        
         &.one {
             background: var(--black-alt);
             background: var(--bg-black-grdt);
             width: 100%;
-
+            
             .hero {
+                border-top: 2px solid var(--grey);
                 width: 100%;
                 color: var(--white);
                 display: flex;
@@ -42,11 +43,11 @@
                     }
 
                     p {
-                        margin-bottom: 20px;
+                        margin-bottom: 40px;
                         color: var(--darker-white);
                     }
 
-                    button {
+                    .link-btn {
                         color: var(--ligher-white);
                         background-color: var(--main);
 

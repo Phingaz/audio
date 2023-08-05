@@ -1,7 +1,6 @@
 import styled from "./ProductDetail.module.css"
 import img from "../assets/headphones/headphone1.png"
 import { useState } from 'react'
-import { Link } from "react-router-dom"
 
 export const ProductDetail = () => {
 
@@ -10,6 +9,7 @@ export const ProductDetail = () => {
 
     const increment = () => {
         setAmount(p => p + 1)
+        setPrice(price)
     }
 
     const decrement = () => {
@@ -18,9 +18,8 @@ export const ProductDetail = () => {
 
     return (
         <section className={styled.section}>
-            
+
             <div className={styled.container}>
-                <Link to='/headphones'>Go Back</Link>
 
                 <div className={styled.img}>
                     <img src={img} alt='headphone' />

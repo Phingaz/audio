@@ -4,8 +4,16 @@
     align-items: center;
     flex-direction: column;
 
+    .title {
+        display: grid;
+        place-content: center;
+        width: 100%;
+        background: var(--bg-black-grdt);
+        color: var(--white);
+        padding: 30px;
+    }
+
     .container {
-        
         width: min(95%, 1000px);
 
 
