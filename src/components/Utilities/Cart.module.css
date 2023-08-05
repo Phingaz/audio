@@ -1,0 +1,159 @@
+.cart {
+    width: min(450px, 100vw);
+    min-height: 400px;
+    position: absolute;
+    margin-top: 50px;
+    border-radius: var(--bd-radius);
+    z-index: 1000;
+    right: 0;
+    top: 45px;
+    background-color: var(--white);
+    animation: slideDown 0.3s ease;
+    color: var(--black-alt);
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 30px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head>h4 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+}
+
+.head>button {
+    background-color: var(--white);
+    text-decoration-line: underline;
+    font-size: 0.7rem;
+    color: var(--grey);
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    gap: 1rem;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.details>h6.total>h6 {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.details>p,
+.total>p {
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    object-fit: contain;
+    border-radius: var(--bd-radius);
+    background-color: var(--darker-white);
+    padding: 20px;
+}
+
+.img>img {
+    width: 50px;
+}
+
+.amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: var(--darker-white);
+    min-width: 20%;
+    color: var(--black-alt);
+}
+
+.amount>span {
+    width: 10%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--grey);
+}
+
+.amount>span::-moz-selection {
+    /* Code for Firefox */
+    color: none;
+    background-color: none;
+    background: none;
+}
+
+.amount>span::selection {
+    color: none;
+    background-color: none;
+    background: none;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total>h6 {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.items>button {
+    color: var(--white);
+    background-color: var(--main);
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {
+        top: 30px;
+        opacity: 0;
+    }
+
+    to {
+        top: 45px;
+        opacity: 1;
+    }
+}

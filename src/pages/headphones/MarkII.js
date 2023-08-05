@@ -32,7 +32,6 @@ export const MarkII = () => {
       <div className="headphone">
 
         <div className="container">
-
           <Link className="back" to='/headphones'>
             Go back
           </Link>

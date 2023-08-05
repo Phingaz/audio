@@ -2,7 +2,15 @@ import styled from "./Header.module.css"
 import { useState } from "react"
 import { NavLink } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useContext } from 'react'
+import Main from "../../Context";
+import { Cart } from "../Utilities/Cart";
+
+
 export const Header = () => {
+
+    const ctx = useContext(Main)
+
     const [sh, setSh] = useState(false)
 
     const shoNa = () => {
@@ -12,6 +20,7 @@ export const Header = () => {
     return (
         <header className={styled.header}>
             <div className={styled.container}>
+                <Cart />
                 <button onClick={shoNa} className={`${styled.nav_btn} ${sh && styled.openb}`}>
                     <span className={styled.ham}></span>
                     <span className={styled.ham}></span>
@@ -53,8 +62,13 @@ export const Header = () => {
                 </nav>
 
                 <div className={styled.cart}>
-                    <ShoppingCartOutlinedIcon className={styled.icon} />
-                    <p className={styled.count}>0</p>
+                    <ShoppingCartOutlinedIcon
+                        className={styled.icon}
+                        onClick={() => ctx.cartIsVisible()}
+                    />
+                    <p className={styled.count}>
+                        {ctx.cart.items.length === 0 ? '' : ctx.cart.items.length}
+                    </p>
                 </div>
             </div>
         </header>

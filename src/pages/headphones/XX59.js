@@ -40,7 +40,7 @@ export const XX59 = () => {
           <div className="products">
             <ProductDetail
               image={main}
-              title1='XX99 Mark II'
+              title1='XX59'
               title2='Headphones'
               newProduct='New Product'
               text='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'

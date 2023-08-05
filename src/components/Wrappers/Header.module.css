@@ -17,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     width: min(95%, 1000px);
+    position: relative;
 }
 
 .nav_links {
@@ -68,6 +69,7 @@ h1 a:hover {
 
 .icon {
     cursor: pointer;
+    z-index: 100;
 }
 
 .count {
