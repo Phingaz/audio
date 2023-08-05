@@ -1,5 +1,5 @@
 .cart {
-    width: min(450px, 100vw);
+    width: min(450px, 90vw);
     min-height: 400px;
     position: absolute;
     margin-top: 50px;
@@ -157,3 +157,9 @@
         opacity: 1;
     }
 }
+
+@media (max-width:500px) {
+    .cart {
+        right: 10px;
+    }
+} 
