@@ -17,7 +17,7 @@ import info2 from "../components/assets/markii/Bitmap-2.png"
 import info3 from "../components/assets/markii/Bitmap.png"
 import { InfoPictures } from "../components/Utilities/Infopictures"
 
-export const Headphone1 = () => {
+export const Mark_II = () => {
   return (
 
     <Wrapper>

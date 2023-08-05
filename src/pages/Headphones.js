@@ -27,7 +27,7 @@ export const Headphones = () => {
               title2='Headphones'
               head='New Product'
               text='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
-              link='/headphones/mark_i'
+              link='/headphones/mark_ii'
             />
             <Section
               order={1}
