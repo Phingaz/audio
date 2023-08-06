@@ -18,6 +18,11 @@
             color: var(--grey);
             align-self: flex-start;
             background-color: transparent;
+            padding: 0;
+            
+            @media (max-width: 500px) {
+                margin-top: 20px;
+            }
         }
 
         .one {
