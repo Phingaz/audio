@@ -50,7 +50,6 @@ export function MainCtxProvider(props) {
             if (el.id === data.id) {
                 el.quantity += 1
                 setQuantity(p => ({ ...p, cartQuantity: el.quantity }))
-
             }
         })
     }
@@ -79,16 +78,32 @@ export function MainCtxProvider(props) {
     }
 
     const addToCart = (data) => {
-
+    
         setQuantity(p => ({
-            ...p,
             productQuantity: 1,
+            ...p,
             cartQuantity: data.quantity
         }))
 
-        cart.items.push(data)
-
         setCart(p => ({ ...p, showCart: true }))
+
+       const id = cart.items.map(el => {
+               return el.title1
+        })
+
+        if (id.includes(data.title1)) {
+             cart.items.map(el => {
+                if (el.title1 === data.title1) {
+                    el.quantity += data.quantity
+                    setQuantity(p => ({ ...p,
+                    productQuantity: 1,
+                    cartQuantity: el.quantity }))
+                }
+             })             
+            return
+        } else {
+            cart.items.push(data)
+        }
     }
 
     const removeAll = () => {

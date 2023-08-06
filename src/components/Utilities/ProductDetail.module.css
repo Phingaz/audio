@@ -156,6 +156,10 @@
     .text>p {
         margin-bottom: 20px;
     }
+
+    .text>h6 {
+        padding-top: 15px;
+    }
 }
 
 @media(max-width: 500px) {
