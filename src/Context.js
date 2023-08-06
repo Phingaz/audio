@@ -99,6 +99,7 @@ export function MainCtxProvider(props) {
                     productQuantity: 1,
                     cartQuantity: el.quantity }))
                 }
+                return null
              })             
             return
         } else {
