@@ -48,9 +48,6 @@ export function MainCtxProvider(props) {
     const incrementCart = (data) => {
         cart.items.forEach(el => {
             if (el.id === data.id) {
-                if (el.quantity === 0) {
-
-                }
                 el.quantity += 1
                 setQuantity(p => ({ ...p, cartQuantity: el.quantity }))
 
@@ -61,7 +58,7 @@ export function MainCtxProvider(props) {
     const decrementCart = (data) => {
         cart.items.forEach(el => {
             if (el.id === data.id) {
-                if (el.quantity === 1) {
+                if (el.quantity <= 1) {
                     cart.items.pop(el)
                 }
                 el.quantity -= 1
@@ -77,7 +74,7 @@ export function MainCtxProvider(props) {
     const decrement = () => {
         setQuantity(p => ({
             ...p,
-            productQuantity: quantity.productQuantity <= 1 ? 1 - 0 : quantity.productQuantity - 1
+            productQuantity: quantity.productQuantity === 1 ? 1 - 0 : quantity.productQuantity - 1
         }))
     }
 
@@ -99,7 +96,7 @@ export function MainCtxProvider(props) {
     }
 
     const checkout = () => {
-        if (cart.items.length === 0) return 
+        if (cart.items.length === 0) return
         navigate("/checkout")
         setCart(p => ({ ...p, showCart: false }))
     }
@@ -111,7 +108,7 @@ export function MainCtxProvider(props) {
     }
 
     const handleSubmit = (grandTotal) => {
-        if (cart.items.length === 0) return 
+        if (cart.items.length === 0) return
         setFormdata(
             { ...input, ...cart.items, ...emoney, grandTotal })
         setError(p => ({ ...p, submitted: true }))
