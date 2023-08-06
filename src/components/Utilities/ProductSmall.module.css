@@ -28,7 +28,7 @@
     width: 80px;
     border: 8px solid transparent;
     border-radius: 50%;
-    box-shadow: 0px 50px 10px rgba(0, 0, 0, 0.594);
+    box-shadow: 0px 55px 15px rgba(0, 0, 0, 0.594);
 }
 
 .content {
@@ -80,6 +80,7 @@
     }
 
     .dropshadow {
-        width: 50px;
+        width: 60px;
+        box-shadow: 0px 45px 15px rgba(0, 0, 0, 0.594);
     }
 }
