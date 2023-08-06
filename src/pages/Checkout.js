@@ -3,7 +3,7 @@ import { Wrapper } from '../components/Wrappers/Wrapper'
 import { Input } from "../components/Utilities/Input"
 import { useContext } from 'react'
 import Main from "../Context"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Payment } from "../components/Utilities/Payment"
 
 import styled from "./Checkout.module.css"
@@ -17,6 +17,8 @@ import yx1 from "../components/assets/yx1/main.png"
 import { Final } from "../components/Utilities/Final"
 
 export const Checkout = () => {
+
+    const navigate = useNavigate()
 
     let img;
     let total = [];
@@ -89,7 +91,9 @@ export const Checkout = () => {
                 <div className="container">
 
                     <div className="category">
-                        <Link to='/'>Go back</Link>
+                        <button className="back" onClick={() => navigate(-1)}>
+                            Go back
+                        </button>
 
                         <div className="wrapper" >
                             <form className="section one">
