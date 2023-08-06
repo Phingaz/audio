@@ -22,9 +22,11 @@ import info3 from "../../components/assets/yx1/Bitmap.png"
 import like1 from "../../components/assets/zx9/main.png"
 import like2 from "../../components/assets/marki/main.png"
 import like3 from "../../components/assets/xx59/main.png"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const YX1 = () => {
+
+  const navigate = useNavigate()
 
   return (
 
@@ -33,9 +35,9 @@ export const YX1 = () => {
 
         <div className="container">
 
-          <Link className="back" to='/speakers'>
+          <button className="back"onClick={() => navigate(-1)}>
             Go back
-          </Link>
+          </button>
 
           <div className="products">
             <ProductDetail

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    letter-spacing: 0;
 
     
     .container {
@@ -16,6 +17,7 @@
             margin-top: 50px;
             color: var(--grey);
             align-self: flex-start;
+            background-color: transparent;
         }
 
         .one {

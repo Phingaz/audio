@@ -21,6 +21,7 @@ export const Cart = ({ product }) => {
     const remove = ctx.removeAll
     const items = ctx.cart.items
     const checkout = ctx.checkout
+    const isVisible = ctx.cartIsVisible
 
     const item = items.map(el => {
         const quantity = el.quantity
@@ -89,7 +90,10 @@ export const Cart = ({ product }) => {
                         <p>Total</p>
                         <h6>${grandTotal.toLocaleString()}</h6>
                     </div>
+                   <div className={styled.btns}>
+                   <button onClick={() => isVisible()} className={styled.continue}>Continue Shopping</button>
                     <button onClick={() => checkout()}>Checkout</button>
+                   </div>
                 </div>
             </div>
         </div>

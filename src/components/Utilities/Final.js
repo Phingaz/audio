@@ -66,8 +66,6 @@ export const Final = () => {
             break;
     }
 
-    console.log(formData)
-
     return (
         <div className={styled.final}>
             <div className={styled.container}>

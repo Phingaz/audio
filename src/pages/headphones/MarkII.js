@@ -22,9 +22,10 @@ import info3 from "../../components/assets/markii/Bitmap.png"
 import like1 from "../../components/assets/markii/interested/like1.png"
 import like2 from "../../components/assets/markii/interested/like2.png"
 import like3 from "../../components/assets/markii/interested/like3.png"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const MarkII = () => {
+  const navigate = useNavigate()
 
   return (
 
@@ -32,9 +33,9 @@ export const MarkII = () => {
       <div className="headphone">
 
         <div className="container">
-          <Link className="back" to='/headphones'>
+        <button className="back"onClick={() => navigate(-1)}>
             Go back
-          </Link>
+          </button>
 
           <div className="products">
             <ProductDetail

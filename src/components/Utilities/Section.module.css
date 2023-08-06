@@ -55,8 +55,9 @@
 }
 
 .text>p {
-    font-weight: 300;
-    margin-bottom: 50px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .text>a {
