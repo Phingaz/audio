@@ -20,6 +20,7 @@ export const Cart = ({ product }) => {
     const decrement = ctx.decrementCart
     const remove = ctx.removeAll
     const items = ctx.cart.items
+    const checkout = ctx.checkout
 
     const item = items.map(el => {
         const quantity = el.quantity
@@ -88,7 +89,7 @@ export const Cart = ({ product }) => {
                         <p>Total</p>
                         <h6>${grandTotal.toLocaleString()}</h6>
                     </div>
-                    <button>Checkout</button>
+                    <button onClick={() => checkout()}>Checkout</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 .cart {
     width: min(450px, 90vw);
-    min-height: 400px;
     position: absolute;
     margin-top: 50px;
     border-radius: var(--bd-radius);
@@ -8,8 +7,11 @@
     right: 0;
     top: 45px;
     background-color: var(--white);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.461);
     animation: slideDown 0.3s ease;
     color: var(--black-alt);
+    opacity: 1 !important;
+    filter: brightness(100%);
 }
 
 .hidden {
@@ -62,7 +64,8 @@
     flex-direction: column;
 }
 
-.details>h6.total>h6 {
+.details>h6,
+.total>h6 {
     font-weight: 800;
     font-size: 1rem;
 }
@@ -162,4 +165,12 @@
     .cart {
         right: 10px;
     }
-} 
+
+    .details>h6 {
+        font-size: 0.8rem;
+    }
+
+    .amount {
+        min-width: 10%;
+    }
+}

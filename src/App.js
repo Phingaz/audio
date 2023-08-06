@@ -13,9 +13,17 @@ import { ZX9 } from './pages/speakers/ZX9';
 import { ZX7 } from './pages/speakers/ZX7';
 import { YX1 } from './pages/earphones/YX1';
 
+import { Checkout } from './pages/Checkout';
+
+import { useContext } from 'react'
+import Main from './Context';
+
 function App() {
+  const ctx = useContext(Main)
+  console.log()
+
   return (
-    <div className="App">
+    <div className={`${ctx.cart.showCart ? 'modal' : 'App'}`}>
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Landing />} />
@@ -31,6 +39,7 @@ function App() {
         <Route path='/earphones' element={<Earphones />} />
 
         <Route path='/earphones/yx1' element={<YX1 />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
     </div>
   );

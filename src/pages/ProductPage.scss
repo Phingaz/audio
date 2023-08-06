@@ -11,6 +11,13 @@
         background: var(--bg-black-grdt);
         color: var(--white);
         padding: 30px;
+
+        h1  {
+
+            @media (max-width: 500px) {
+                font-size: 2rem;
+            }
+        }
     }
 
     .container {

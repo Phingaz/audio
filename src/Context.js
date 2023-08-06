@@ -1,10 +1,13 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 let value = {}
 
 const Main = createContext(value)
 
 export function MainCtxProvider(props) {
+
+    const navigate = useNavigate()
 
     const [cart, setCart] = useState({
         items: [],
@@ -16,6 +19,26 @@ export function MainCtxProvider(props) {
         cartQuantity: 1,
     })
 
+    const [input, setInput] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        address: '',
+        zip: '',
+        city: '',
+        country: '',
+    })
+
+
+    const [error, setError] = useState({
+        success: true
+    })
+
+    const [emoney, setEmoney] = useState({
+        number: '',
+        pin: ''
+    })
+
     const cartIsVisible = () => {
         setCart(p => ({ ...p, showCart: !cart.showCart }))
     }
@@ -23,7 +46,7 @@ export function MainCtxProvider(props) {
     const incrementCart = (data) => {
         cart.items.forEach(el => {
             if (el.id === data.id) {
-                if (el.quantity === 0){
+                if (el.quantity === 0) {
 
                 }
                 el.quantity += 1
@@ -36,7 +59,7 @@ export function MainCtxProvider(props) {
     const decrementCart = (data) => {
         cart.items.forEach(el => {
             if (el.id === data.id) {
-                if (el.quantity === 1){
+                if (el.quantity === 1) {
                     cart.items.pop(el)
                 }
                 el.quantity -= 1
@@ -73,9 +96,25 @@ export function MainCtxProvider(props) {
         setCart({ items: [], showCart: true })
     }
 
+    const checkout = () => {
+        navigate("/checkout")
+        setCart(p => ({ ...p, showCart: false }))
+    }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setEmoney(p => ({ ...p, [name]: value }))
+        setInput(p => ({ ...p, [name]: value }))
+    }
+
+    const handleSubmit = (grandTotal) => {
+        console.log({ ...input, ...cart.items, ...emoney, grandTotal })
+    }
+
+
     value = {
-        cart, quantity,
-        cartIsVisible, increment, decrement, addToCart, removeAll, incrementCart, decrementCart
+        cart, quantity, input, error, emoney, setEmoney, setError, setInput,
+        cartIsVisible, increment, decrement, addToCart, removeAll, incrementCart, decrementCart, checkout, handleChange, handleSubmit
     }
 
     return (
