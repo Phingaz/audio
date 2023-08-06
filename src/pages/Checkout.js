@@ -81,7 +81,9 @@ export const Checkout = () => {
 
     return (
         <Wrapper>
-            <Final />
+            {
+                error.submitted && <Final />
+            }
             <div className='checkout'>
 
                 <div className="container">

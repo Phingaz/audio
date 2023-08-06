@@ -29,15 +29,17 @@ export function MainCtxProvider(props) {
         country: '',
     })
 
-
     const [error, setError] = useState({
-        success: true
+        success: true,
+        submitted: false
     })
 
     const [emoney, setEmoney] = useState({
         number: '',
         pin: ''
     })
+
+    const [formData, setFormdata] = useState({})
 
     const cartIsVisible = () => {
         setCart(p => ({ ...p, showCart: !cart.showCart }))
@@ -75,7 +77,7 @@ export function MainCtxProvider(props) {
     const decrement = () => {
         setQuantity(p => ({
             ...p,
-            productQuantity: quantity.productQuantity === 1 ? 1 - 0 : quantity.productQuantity - 1
+            productQuantity: quantity.productQuantity <= 1 ? 1 - 0 : quantity.productQuantity - 1
         }))
     }
 
@@ -97,6 +99,7 @@ export function MainCtxProvider(props) {
     }
 
     const checkout = () => {
+        if (cart.items.length === 0) return 
         navigate("/checkout")
         setCart(p => ({ ...p, showCart: false }))
     }
@@ -108,13 +111,25 @@ export function MainCtxProvider(props) {
     }
 
     const handleSubmit = (grandTotal) => {
-        console.log({ ...input, ...cart.items, ...emoney, grandTotal })
+        if (cart.items.length === 0) return 
+        setFormdata(
+            { ...input, ...cart.items, ...emoney, grandTotal })
+        setError(p => ({ ...p, submitted: true }))
+    }
+
+
+    const home = () => {
+        navigate("/")
+        setError(p => ({ ...p, submitted: false }))
+        setFormdata({})
+        setCart({ items: [], showCart: false, })
+        setQuantity({ productQuantity: 1, cartQuantity: 1, })
     }
 
 
     value = {
-        cart, quantity, input, error, emoney, setEmoney, setError, setInput,
-        cartIsVisible, increment, decrement, addToCart, removeAll, incrementCart, decrementCart, checkout, handleChange, handleSubmit
+        cart, quantity, input, error, emoney, formData, setEmoney, setError, setInput,
+        cartIsVisible, increment, decrement, addToCart, removeAll, incrementCart, decrementCart, checkout, handleChange, handleSubmit, home
     }
 
     return (
