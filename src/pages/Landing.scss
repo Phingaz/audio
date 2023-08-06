@@ -89,6 +89,10 @@
                         align-items: center;
                         min-height: 100vh;
                     }
+
+                    @media (max-width:400px) {
+                        margin-top: 50px;
+                    }
                 }
 
                 &.two {
@@ -271,12 +275,12 @@
 
                     img {
                         top: 50%;
-                        left: -54%;
+                        left: -50%;
                         transform: translate(50%, -50%);
                         width: 100%;
                         height: 100%;
                         position: absolute;
-                        object-fit: contain;
+                        object-fit: cover;
                         object-position: center;
                     }
                 }
