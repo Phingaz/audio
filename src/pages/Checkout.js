@@ -1,7 +1,7 @@
 import "./Checkout.scss"
 import { Wrapper } from '../components/Wrappers/Wrapper'
 import { Input } from "../components/Utilities/Input"
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import Main from "../Context"
 import { Link } from "react-router-dom"
 import { Payment } from "../components/Utilities/Payment"
